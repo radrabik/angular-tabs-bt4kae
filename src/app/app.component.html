@@ -1,0 +1,49 @@
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+
+
+      <!-- tabs -->
+      <div class="header-panels">
+        <div class="header-panel header-panel half-margin-top">
+            <div class="header-panel header-panel">
+              <div class="header-item">
+                  <ul class="tabs">
+                    <ng-container *ngFor="let item of myTabs | keyvalue">
+                      <li *ngIf="item.value.show" id="tabsheader-20" class="tab {{ item.value.activeTab }}" (click)="onTabs(item.key)">
+                          <a tabindex="0">
+                              <div class="tab__heading tab-header subheader text-turquoise"> {{ item.value.tabName }}</div>
+                          </a>
+                      </li>
+                    </ng-container>
+                  </ul>
+              </div>
+            </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+  <div class="row">
+      <div *ngIf="myTabs[1].activeTab === 'active'" class="col-md-12">
+
+        <p>
+          TAB 1 is active
+        </p>
+      </div>
+      
+      <div *ngIf="myTabs[2].activeTab === 'active'" class="col-md-12">
+
+        <p>
+          TAB 2 is active
+        </p>
+      </div>
+  </div>
+
+
+<div>
